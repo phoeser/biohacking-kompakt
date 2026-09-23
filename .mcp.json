@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "biohacking-kompakt": {
+      "type": "http",
+      "url": "https://mcp.biohackingkompakt.de/mcp"
+    }
+  }
+}
