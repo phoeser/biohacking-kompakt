@@ -1,0 +1,14 @@
+{
+  "name": "biohacking-kompakt",
+  "version": "1.0.0",
+  "description": "Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen: über 250 Themen von biohackingkompakt.de mit BK-Score, Risiken, Quellen und den passenden Podcastfolgen. Nur lesend, ohne Anmeldung.",
+  "author": {
+    "name": "Paul Höser · Biohacking Kompakt",
+    "email": "kontakt@biohackingkompakt.de",
+    "url": "https://biohackingkompakt.de"
+  },
+  "homepage": "https://biohackingkompakt.de",
+  "repository": "https://github.com/phoeser/biohacking-kompakt",
+  "license": "MIT",
+  "keywords": ["biohacking", "supplements", "peptide", "longevity", "evidenz", "gesundheit", "podcast", "deutsch"]
+}

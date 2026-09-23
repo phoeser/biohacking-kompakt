@@ -1,0 +1,17 @@
+{
+  "name": "biohacking-kompakt",
+  "owner": {
+    "name": "Paul Höser · Biohacking Kompakt",
+    "email": "kontakt@biohackingkompakt.de"
+  },
+  "metadata": {
+    "description": "Offizieller Marketplace von Biohacking Kompakt: Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen."
+  },
+  "plugins": [
+    {
+      "name": "biohacking-kompakt",
+      "source": "./",
+      "description": "Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen mit BK-Score, Quellen und Podcastfolgen von biohackingkompakt.de."
+    }
+  ]
+}
