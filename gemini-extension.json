@@ -1,7 +1,7 @@
 {
   "name": "biohacking-kompakt",
-  "version": "1.0.0",
-  "description": "Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen: über 250 Themen von biohackingkompakt.de mit BK-Score, Risiken, Quellen und Podcastfolgen. Nur lesend, ohne Anmeldung.",
+  "version": "1.1.0",
+  "description": "Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen: fast 500 Themen von biohackingkompakt.de mit BK-Score, Risiken, Quellen und Podcastfolgen. Nur lesend, ohne Anmeldung.",
   "mcpServers": {
     "biohacking-kompakt": {
       "httpUrl": "https://mcp.biohackingkompakt.de/mcp",
