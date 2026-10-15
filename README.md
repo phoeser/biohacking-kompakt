@@ -1,23 +1,42 @@
 # Biohacking Kompakt für Claude und Gemini
 
-Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen direkt im KI-Assistenten. Das Plugin verbindet Claude bzw. Gemini mit der Wissensdatenbank von [biohackingkompakt.de](https://biohackingkompakt.de): über 250 Themen mit Wirkungsweise, Risiken, Quellen und dem **BK-Score**, dazu die Folgen des Podcasts „Biohacking Kompakt".
+Evidenz-Check zu Supplements, Peptiden und Biohacking-Anwendungen direkt im KI-Assistenten. Das Plugin verbindet Claude bzw. Gemini mit der Wissensdatenbank von [biohackingkompakt.de](https://biohackingkompakt.de): fast 500 Themen mit Wirkungsweise, Risiken, Quellen und dem **BK-Score**, dazu die Folgen des Podcasts „Biohacking Kompakt".
 
 *English summary: Read-only access to the German evidence database biohackingkompakt.de — supplements, peptides and biohacking practices rated with the BK-Score (state of knowledge, not a verdict on the substance), plus matching podcast episodes. No account, no API key.*
 
 ## Was drin ist
 
-- **Remote-MCP-Server** `https://mcp.biohackingkompakt.de/mcp` — sieben Werkzeuge, alle nur lesend, keine Anmeldung
-- **Skill „BK-Score einordnen"** (Claude) bzw. **GEMINI.md** (Gemini) — sagt dem Assistenten, wie er nachschlägt und den Score richtig liest
+- **Remote-MCP-Server** `https://mcp.biohackingkompakt.de/mcp` — sechzehn Werkzeuge, alle nur lesend, keine Anmeldung
+- **Skills „BK-Score einordnen" und „Blutwerte einordnen"** (Claude) bzw. **GEMINI.md** (Gemini) — sagen dem Assistenten, wie er nachschlägt und den Score bzw. Laborwerte richtig liest
+- **Befehle** `/bk-check`, `/bk-vergleich`, `/bk-blutwert`, `/bk-neu` (Claude)
 
 | Werkzeug | Wofür |
 |---|---|
 | `bk_search_topics` | Themen suchen (Name, Zweitname, Schlagwort) |
 | `bk_get_topic` | Einen Eintrag vollständig abrufen: Nutzen, Risiken, Quellen, BK-Score, Podcastfolgen |
-| `bk_list_scores` | Themen nach BK-Score filtern, z. B. „gut belegt und positiv" oder „viel Hype, wenig Evidenz" |
+| `bk_list_scores` | Themen nach BK-Score filtern, z. B. „gut belegt und positiv" oder „Werbung weit vor den Daten" |
 | `bk_search_podcast` | Podcastfolgen suchen |
 | `bk_get_podcast_episode` | Eine Folge mit Hörlinks abrufen |
 | `bk_list_erfahrungen` | Erfahrungsberichte (Einzelbeobachtungen, kein Beleg) |
 | `bk_get_zitierregeln` | Hinweise zum korrekten Zitieren und zur Bedeutung der Score-Achsen |
+| `bk_search_inhalte` | Volltextsuche über alle Seitentexte (Themen, Tipps, Vergleiche, Glossar, Folgen) |
+| `bk_get_seite` | Eine Seite vollständig lesen |
+| `bk_search_studien` | Die Studien-Datenbank: rund 2.500 Studien mit Studientyp und PubMed-/DOI-Link |
+| `bk_compare_topics` | Zwei bis vier Themen im BK-Score nebeneinander |
+| `bk_search_blutwerte` | Blutwerte des Longevity-Panels, Laborpakete und Messregeln |
+| `bk_get_blutwert` | Ein Marker vollständig: Referenz, Zielbereich, Bedeutung, Hebel, Störfaktoren |
+| `bk_get_signalweg` | Signalwege-Atlas: mTOR, AMPK, Sirtuine … und welche Themen dort ansetzen |
+| `bk_get_report` | Kennzahlen des Biohacking-Reports, live aus dem Bestand |
+| `bk_list_aenderungen` | Was hat sich an Bewertungen geändert – mit Quelle |
+
+### Befehle (Claude)
+
+| Befehl | Wofür |
+|---|---|
+| `/bk-check <Thema>` | Evidenz-Check zu einem Thema |
+| `/bk-vergleich <A> vs <B>` | Themen im BK-Score vergleichen |
+| `/bk-blutwert <Marker Wert>` | Einen Blutwert einordnen, z. B. „ApoB 110 mg/dl" |
+| `/bk-neu [Thema]` | Neueste Bewertungsänderungen und Folgen |
 
 ## Installation
 
@@ -49,6 +68,10 @@ Streamable-HTTP-Endpunkt: `https://mcp.biohackingkompakt.de/mcp` (ohne Authentif
 - „Wo ist der Hype größer als die Evidenz?"
 - „Ist BPC-157 am Menschen untersucht?"
 - „Gibt es eine Podcastfolge zu Magnesium?"
+- „Mein ApoB ist 110 mg/dl – was heißt das?"
+- „Kreatin oder Beta-Alanin?"
+- „Was hemmt mTOR, und was aktiviert AMPK?"
+- „Wie viel im Biohacking ist überhaupt gut belegt?"
 
 ## Den BK-Score richtig lesen
 
